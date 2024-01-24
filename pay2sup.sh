@@ -103,11 +103,7 @@ get_partitions() {
 
 toolchain_download() {
 	[ -d "$HOME/bin" ] && chmod +x -R "$HOME/bin" && return
-	if [ $LINUX -eq 0 ]; then
-		   URL="https://github.com/elfametesar/uploads/raw/main/toolchain_android_arm64.tar"
-	else
-		   URL="https://github.com/elfametesar/uploads/raw/main/toolchain_linux_x64.tar"
-	fi	
+	URL="https://github.com/elfametesar/uploads/raw/main/toolchain_linux_x64.tar"
 	echo "Downloading toolchain"
 	curl -k -L $URL -o ${URL##*/} 1> /dev/null
 	echo "Extracting toolchain"
