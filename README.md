@@ -21,8 +21,7 @@ OPTION 2: pay2sup.sh [-rw|--read-write] [-r|--resize] [-c|--continue]
 Note that --continue or payload.zip|.bin flag has to come after all other flags otherwise other flags will be ignored. You should not use payload.zip|.bin and --continue flags mixed with together. They are mutually exclusive.
 
 ```
-
-~~This tool has only been tested on POCO F3 device, and is compatible with devices that have the same type of super partition scheme.~~ This tool is aimed to support multiple devices, however it requires testers, which I have none. You are free to test it on your device and give feedbacks.
+This tool is aimed to support multiple devices, however it requires testers, which I have none. You are free to test it on your device and give feedbacks.
 
 It basically converts any payload flashable ROMs into super flashables to make flashing easier and faster. You can also repack super flashables to grant them read&write access and increase/decrease partition sizes or disable Android's file encryption.
 
@@ -41,7 +40,21 @@ It basically converts any payload flashable ROMs into super flashables to make f
 
 This happens more often because the ROM you're converting is EROFS and while converting to EXT4, it has to get bigger because of the filesystems' compression rates. If the source ROM is too big, this error can happen. To work around it, you have to debloat the partition images. Tool has a debloat feature that you can use.
 
+
 If you wish to go back to EROFS to make partition images fit the super block, you can do that too. The tool will ask you during runtime.
+
+- My Device has different partitions in super.img
+You can add it by yourself by editing pay2sup.sh
+EXAMPLE:
+```
+Before
+![Capture](https://github.com/rosemaryuser/Payload2Super/assets/126266679/4e0c860e-44b3-42db-bf06-d20e44b2683d)
+
+After
+![Capture1](https://github.com/rosemaryuser/Payload2Super/assets/126266679/2beb9686-1f61-4247-9890-9ac2ce1a5fc6)
+```
+Note:
+Partition added to the list will also be affected by all flags applied
 
 # To get this tool
 ```
@@ -54,7 +67,7 @@ cd Payload2Super
 sh pay2sup.sh -rw -r -dfe -t $(nproc --all) <path-to-your-rom-file>
 ```
 
-This is a multi-platform tool, meaning it can work on both x64 Linux distros and ARM64 Android devices. ~~To use it on Linux distros, you need ADB access once to your device in order to get the super block size.~~ You can now use this tool without needing ADB access, by manually adding super block size and slot suffix.
+This is a multi-platform tool, meaning it can work on both x64 Linux distros and ARM64 Android devices. You can use this tool without needing ADB access, by manually adding super block size and slot suffix.
 
 Warning: Some shells may not be compatible, so make sure to use it on BASH, ZSH or KSH. BASH is recommended.
 
@@ -89,3 +102,4 @@ sh pay2sup.sh -rw -r -dfe -t <corenumber> <path-to-ROM>
 - POCO F3
 - Redmi Note 10 (Mojito)
 - Oneplus 8T
+- Redmi Note 10s (Rosemary)
