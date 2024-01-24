@@ -95,19 +95,7 @@ get_partitions() {
 	fi
 	{ umount -d "$TEMP" || umount -d -l "$TEMP"; } 2> /dev/null
 	[ -z "$FSTABS" ] && { echo "Partition list cannot be retrieved, this is a fatal error, exiting..."; exit 1; }
-	PART_LIST=$(\
-		echo "$FSTABS" | awk '!seen[$2]++ { if(\
-				  $2 != "/data" &&\
-                                  $2 != "/metadata" &&\
-                                  $2 != "/boot" &&\
-                                  $2 != "/vendor_boot"&&\
-                                  $2 != "/recovery" &&\
-                                  $2 != "/init_boot" &&\
-                                  $2 != "/dtbo" &&\
-                                  $2 != "/cache" &&\
-                                  $2 != "/misc" &&\
-                                  $2 != "/oem" &&\
-                                  $2 != "/persist" ) print $2 }'  | grep -E -o '^/[a-z]*(_|[a-z])*[^/]$'| xargs printf "%s.img ")
+	PART_LIST=$(echo "$FSTABS" | awk '$2 ~ /^(\/(system|system_ext|product|vendor))$/ { printf "%s.img ", $2 }')
 	for img in "$HOME"/extracted/*.img; do
 		case $PART_LIST in *${img##*/}* ) export PARTS="$PARTS ${img##*/} "; esac
 	done
