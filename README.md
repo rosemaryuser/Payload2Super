@@ -104,6 +104,10 @@ And finally in the end, specify your ROM path:
 ```
 sh pay2sup.sh -rw -r -dfe -t <corenumber> <path-to-ROM>
 ```
+
+>[!NOTE]
+>Contact me on telegram http://t.me/techgeekyboy
+
 # Tested On
 - Motorola G20
 - POCO F3
