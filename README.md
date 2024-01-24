@@ -48,18 +48,20 @@ If you wish to go back to EROFS to make partition images fit the super block, yo
 You can add it by yourself by editing pay2sup.sh
 
 EXAMPLE:
-```
+
 Before
+
 ![Original.](https://github.com/rosemaryuser/Payload2Super/assets/126266679/1e3c72bb-6f28-486b-afeb-0a204fe1c82c)
 
 After
+
 ![Added audio_dsp.](https://github.com/rosemaryuser/Payload2Super/assets/126266679/6d6c012c-5884-4611-b28b-433634b3a170)
 
 
 
-```
-> [!NOTE]
-> Partition added to or removed from the list will also be affected by the flags applied
+
+> [!IMPORTANT]
+> Only partitions in this list will be affected by the flags applied 
 
 # To get this tool
 ```
