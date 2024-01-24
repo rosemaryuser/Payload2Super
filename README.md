@@ -1,4 +1,4 @@
-# Payload2Super
+# Payload2Super :shipit:
 
 ```
 OPTION 1: pay2sup.sh [-rw|--read-write] [-r|--resize] payload.bin|super.img|rom.zip|/dev/block/by-name/super
@@ -50,15 +50,16 @@ You can add it by yourself by editing pay2sup.sh
 EXAMPLE:
 ```
 Before
-![Original](https://github.com/rosemaryuser/Payload2Super/assets/126266679/3d39a530-d49b-4bb5-9cb9-4ceaf477bd68)
+![Original](https://github.com/rosemaryuser/Payload2Super/assets/126266679/1e3c72bb-6f28-486b-afeb-0a204fe1c82c)
 
 After
-![Added audio_dsp]
-(https://github.com/rosemaryuser/Payload2Super/assets/126266679/8449d89d-e49a-49cc-8011-6d44e372b1c7)
+![Added audio_dsp](https://github.com/rosemaryuser/Payload2Super/assets/126266679/6d6c012c-5884-4611-b28b-433634b3a170)
+
+
 
 ```
-Note: `#FF0000`
-Partition added to the list will also be affected by all flags applied
+> [!NOTE]
+> Partition added to the list will also be affected by all flags applied
 
 # To get this tool
 ```
