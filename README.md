@@ -44,16 +44,20 @@ This happens more often because the ROM you're converting is EROFS and while con
 If you wish to go back to EROFS to make partition images fit the super block, you can do that too. The tool will ask you during runtime.
 
 - My Device has different partitions in super.img
+
 You can add it by yourself by editing pay2sup.sh
+
 EXAMPLE:
 ```
 Before
-![Capture](https://github.com/rosemaryuser/Payload2Super/assets/126266679/4e0c860e-44b3-42db-bf06-d20e44b2683d)
+![Original](https://github.com/rosemaryuser/Payload2Super/assets/126266679/3d39a530-d49b-4bb5-9cb9-4ceaf477bd68)
 
 After
-![Capture1](https://github.com/rosemaryuser/Payload2Super/assets/126266679/2beb9686-1f61-4247-9890-9ac2ce1a5fc6)
+![Added audio_dsp]
+(https://github.com/rosemaryuser/Payload2Super/assets/126266679/8449d89d-e49a-49cc-8011-6d44e372b1c7)
+
 ```
-Note:
+Note: `#FF0000`
 Partition added to the list will also be affected by all flags applied
 
 # To get this tool
