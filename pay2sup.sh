@@ -95,7 +95,8 @@ get_partitions() {
 	fi
 	{ umount -d "$TEMP" || umount -d -l "$TEMP"; } 2> /dev/null
 	[ -z "$FSTABS" ] && { echo "Partition list cannot be retrieved, this is a fatal error, exiting..."; exit 1; }
-	PART_LIST=$(echo "$FSTABS" | awk '$2 ~ /^(\/(system|system_ext|product|vendor))$/ { printf "%s.img ", $2 }')
+        extra_partition="$(cat partitions.txt)"
+	PART_LIST=$(echo "$FSTABS" | awk -v pattern="^/(system|system_ext|product|vendor|$extra_partition)$" '$2 ~ pattern { printf "%s.img ", $2 }')
 	for img in "$HOME"/extracted/*.img; do
 		case $PART_LIST in *${img##*/}* ) export PARTS="$PARTS ${img##*/} "; esac
 	done
