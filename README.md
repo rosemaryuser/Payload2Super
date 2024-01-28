@@ -51,6 +51,22 @@ You can add it by yourself by adding partitions in partition.txt
 >__ONLY ADD PARTITION TO THE FIRST LINE OF THE TEXT FILE__
 >
 >__THE SCRIPT BY DEFAULT ALREADY INCLUDES "SYSTEM" , "SYSTEM_EXT" , "PRODUCT" AND "VENDOR" PARTITION SO DO NOT ADD THESE STATED PARTITION TO THE THE TEXT FILE__
+>
+>__IF YOU WANT TO REMOVE ANY DEFAULT PARTITIONS YOU NEED TO EDIT THE PAY2SUP.SH__
+>
+>__BEFORE__
+>
+>![Screenshot 2024-01-28 155320](https://github.com/rosemaryuser/Payload2Super/assets/126266679/5cf1ce5b-1ce7-444a-93d6-29f99d288b13)
+>
+>__AFTER__
+>
+>![Screenshot 2024-01-28 155320](https://github.com/rosemaryuser/Payload2Super/assets/126266679/ae4417b1-ae27-4b7b-b2bf-7ba452f12282)
+>
+>__IN THIS EXAMPLE I REMOVED VENDOR PARTITION__
+>
+>__I ADVICE TO NOT REMOVE DEFAULT PARTITIONS UNLESS U REALLY KNOW WHAT YOU ARE DOING__
+
+
 
 
 >[!IMPORTANT]
@@ -66,7 +82,7 @@ You can add it by yourself by adding partitions in partition.txt
 >
 >When adding a __NEW SINGLE__ partition just type it in the first line
 >
->When adding __MULTIPLE__ partitions make sure to put a "|" before typing the next partition as shown in the example image
+>When adding __MULTIPLE__ partitions make sure to put a "|" also know as "pipe" before typing the next partition as shown in the example image
 >
 >__Only partitions in this list will be affected by the flags applied__ 
 
