@@ -45,23 +45,30 @@ If you wish to go back to EROFS to make partition images fit the super block, yo
 
 - My Device has different partitions in super.img
 
-You can add it by yourself by editing pay2sup.sh
+You can add it by yourself by adding partitions in partition.txt
 
-EXAMPLE:
-
-Before
-
-![Original.](https://github.com/rosemaryuser/Payload2Super/assets/126266679/1e3c72bb-6f28-486b-afeb-0a204fe1c82c)
-
-After
-
-![Added audio_dsp.](https://github.com/rosemaryuser/Payload2Super/assets/126266679/6d6c012c-5884-4611-b28b-433634b3a170)
+>[!WARNING]
+>__ONLY ADD PARTITION TO THE FIRST LINE OF THE TEXT FILE__
+>
+>__THE SCRIPT BY DEFAULT ALREADY INCLUDES "SYSTEM" , "SYSTEM_EXT" , "PRODUCT" AND "VENDOR" PARTITION SO DO NOT ADD THESE STATED PARTITION TO THE THE TEXT FILE__
 
 
-
-
-> [!IMPORTANT]
-> Only partitions in this list will be affected by the flags applied 
+>[!IMPORTANT]
+>EXAMPLE:
+>
+>__SINGLE PARTITION__
+>
+>![Capture1](https://github.com/rosemaryuser/Payload2Super/assets/126266679/9d54466e-ba2c-4f6b-8b9f-9a4f666278a3)
+>
+>__MULTIPLE PARTITIONS__
+>
+>![Capture](https://github.com/rosemaryuser/Payload2Super/assets/126266679/f647de64-6edb-40a2-9f73-4cde96f45a2b)
+>
+>When adding a __NEW SINGLE__ partition just type it in the first line
+>
+>When adding __MULTIPLE__ partitions make sure to put a "|" before typing the next partition as shown in the example image
+>
+>__Only partitions in this list will be affected by the flags applied__ 
 
 # To get this tool
 ```
