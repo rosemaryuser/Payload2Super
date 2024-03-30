@@ -25,6 +25,8 @@ This tool is aimed to support multiple devices, however it requires testers, whi
 
 It basically converts any payload flashable ROMs into super flashables to make flashing easier and faster. You can also repack super flashables to grant them read&write access and increase/decrease partition sizes or disable Android's file encryption.
 
+ROOT ACCESS REQUIRED 
+
 ## FEATURES
  - Can convert payload flashables to super flashables
  - Can repack super flashables from zips or /dev/block/by-name/super partition
@@ -70,6 +72,7 @@ You can add it by yourself by adding partitions in partition.txt
 
 
 >[!IMPORTANT]
+>
 >EXAMPLE:
 >
 >__SINGLE PARTITION__
@@ -89,6 +92,7 @@ You can add it by yourself by adding partitions in partition.txt
 # To get this tool
 ```
 git clone https://github.com/elfametesar/Payload2Super
+su
 cd Payload2Super
 ```
 # Example Usage
